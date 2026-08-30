@@ -1,0 +1,5358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aura Spa | Massage in Nashville, TN</title>
+
+  <meta
+    name="description"
+    content="Aura Spa in Nashville, Tennessee. A calm, private massage experience at 712 Meridian St. Call or text 615-349-7710."
+  />
+
+  <meta name="theme-color" content="#f7f3ea" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+
+    /* ==========================================================
+       AURA SPA
+       LIGHT LUXURY SPA WEBSITE
+       ========================================================== */
+
+    :root {
+      --cream: #f8f5ee;
+      --cream-2: #f1eadf;
+      --ivory: #fffdf8;
+      --sage: #aab7a4;
+      --sage-dark: #516456;
+      --sage-soft: #dce4d8;
+      --olive: #35483b;
+
+      --gold: #b99b5c;
+      --gold-dark: #94763e;
+      --gold-soft: #e7d7b1;
+
+      --brown: #63594c;
+      --text: #253029;
+      --muted: #777a70;
+
+      --line: rgba(73, 85, 73, 0.14);
+      --gold-line: rgba(185, 155, 92, 0.3);
+
+      --shadow:
+        0 25px 70px rgba(68, 63, 51, 0.10);
+
+      --shadow-soft:
+        0 12px 35px rgba(68, 63, 51, 0.08);
+
+      --radius: 28px;
+
+      --serif:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+      --sans:
+        "DM Sans",
+        Arial,
+        sans-serif;
+    }
+
+
+    /* ==========================================================
+       BASE
+       ========================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      margin: 0;
+
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 10% 5%,
+          rgba(170, 183, 164, 0.18),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 95% 40%,
+          rgba(231, 215, 177, 0.18),
+          transparent 28%
+        ),
+        var(--cream);
+
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    ::selection {
+      background: var(--gold-soft);
+      color: var(--olive);
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 44px));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding: clamp(85px, 10vw, 145px) 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    h1 {
+      max-width: 950px;
+      margin-bottom: 28px;
+
+      font-size:
+        clamp(4rem, 8vw, 8rem);
+
+      letter-spacing: -0.045em;
+    }
+
+    h2 {
+      margin-bottom: 23px;
+
+      font-size:
+        clamp(3rem, 5.5vw, 5.6rem);
+
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      font-size:
+        clamp(1.7rem, 2.6vw, 2.35rem);
+    }
+
+    .lead {
+      max-width: 650px;
+
+      color: var(--muted);
+
+      font-size:
+        clamp(1rem, 1.4vw, 1.15rem);
+    }
+
+    .gold {
+      color: var(--gold-dark);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      margin-bottom: 18px;
+
+      color: var(--gold-dark);
+
+      font-size: 0.72rem;
+      font-weight: 600;
+
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 34px;
+      height: 1px;
+
+      content: "";
+
+      background: var(--gold);
+    }
+
+
+    /* ==========================================================
+       BUTTONS
+       ========================================================== */
+
+    .btn {
+      min-height: 54px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      padding: 0 28px;
+
+      border: 1px solid transparent;
+      border-radius: 999px;
+
+      font-size: 0.78rem;
+      font-weight: 600;
+
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #667b69,
+          #405746
+        );
+
+      box-shadow:
+        0 12px 30px
+        rgba(64, 87, 70, .18);
+    }
+
+    .btn-primary:hover {
+      background:
+        linear-gradient(
+          135deg,
+          #728b76,
+          #354b3c
+        );
+    }
+
+    .btn-gold {
+      color: #423827;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ead8a9,
+          #cbae69
+        );
+
+      box-shadow:
+        0 12px 30px
+        rgba(185, 155, 92, .18);
+    }
+
+    .btn-outline {
+      color: var(--olive);
+
+      border-color:
+        rgba(53, 72, 59, .24);
+
+      background:
+        rgba(255,255,255,.62);
+
+      backdrop-filter:
+        blur(12px);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-dark);
+      background: #fff;
+    }
+
+
+    /* ==========================================================
+       HEADER
+       ========================================================== */
+
+    .site-header {
+      position: fixed;
+      z-index: 1000;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      transition:
+        background .35s ease,
+        box-shadow .35s ease,
+        backdrop-filter .35s ease;
+    }
+
+    .site-header.scrolled {
+      background:
+        rgba(255, 253, 248, .91);
+
+      backdrop-filter:
+        blur(18px);
+
+      box-shadow:
+        0 8px 35px
+        rgba(69, 62, 50, .07);
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 86px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 32px;
+    }
+
+    .brand {
+      position: relative;
+      z-index: 1002;
+
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        rgba(185,155,92,.55);
+
+      border-radius: 50%;
+
+      color: var(--gold-dark);
+
+      background:
+        rgba(255,255,255,.52);
+
+      font-family: var(--serif);
+      font-size: 1.45rem;
+    }
+
+    .brand-name {
+      color: var(--olive);
+
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 600;
+
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+
+      gap:
+        clamp(16px, 2vw, 30px);
+    }
+
+    .nav-links a:not(.btn) {
+      position: relative;
+
+      color: #4f5b52;
+
+      font-size: .77rem;
+      font-weight: 500;
+
+      letter-spacing: .06em;
+    }
+
+    .nav-links a:not(.btn)::after {
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: -7px;
+
+      height: 1px;
+
+      content: "";
+
+      background: var(--gold);
+
+      transform: scaleX(0);
+      transform-origin: right;
+
+      transition:
+        transform .3s ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .menu-btn {
+      position: relative;
+      z-index: 1002;
+
+      width: 48px;
+      height: 48px;
+
+      display: none;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 50%;
+
+      background:
+        rgba(255,255,255,.65);
+
+      color: var(--olive);
+
+      cursor: pointer;
+    }
+
+    .menu-btn span {
+      position: absolute;
+      left: 13px;
+
+      width: 20px;
+      height: 1px;
+
+      background: currentColor;
+
+      transition: .3s ease;
+    }
+
+    .menu-btn span:nth-child(1) {
+      top: 18px;
+    }
+
+    .menu-btn span:nth-child(2) {
+      top: 25px;
+    }
+
+    .menu-btn.active span:nth-child(1) {
+      top: 22px;
+      transform: rotate(45deg);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+      top: 22px;
+      transform: rotate(-45deg);
+    }
+
+
+    /* ==========================================================
+       HERO
+       ========================================================== */
+
+    .hero {
+      min-height: 100svh;
+
+      position: relative;
+
+      display: flex;
+      align-items: flex-end;
+
+      overflow: hidden;
+
+      padding:
+        150px 0 66px;
+    }
+
+    .hero-media,
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-media {
+      background: var(--sage-soft);
+    }
+
+    .hero-slide {
+      opacity: 0;
+
+      transform:
+        scale(1.02);
+
+      transition:
+        opacity 1.5s ease,
+        transform 8s ease;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+
+      transform:
+        scale(1.08);
+    }
+
+    .hero-slide img {
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(250,247,239,.97) 0%,
+          rgba(250,247,239,.88) 34%,
+          rgba(250,247,239,.38) 68%,
+          rgba(250,247,239,.12) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(247,243,234,.93) 0%,
+          rgba(247,243,234,.08) 55%
+        );
+    }
+
+    .hero-glow {
+      position: absolute;
+      z-index: 1;
+
+      left: -15%;
+      bottom: -25%;
+
+      width: 60vw;
+      height: 60vw;
+
+      border-radius: 50%;
+
+      background:
+        rgba(231,215,177,.4);
+
+      filter: blur(100px);
+
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+
+      width: 100%;
+    }
+
+    .hero h1 {
+      color: #314036;
+    }
+
+    .hero-sub {
+      max-width: 620px;
+
+      margin-bottom: 34px;
+
+      color: #606960;
+
+      font-size:
+        clamp(1rem,1.5vw,1.22rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .trust-row {
+      margin-top:
+        clamp(50px,8vh,88px);
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      border-top:
+        1px solid
+        rgba(72,86,72,.16);
+
+      border-bottom:
+        1px solid
+        rgba(72,86,72,.16);
+
+      background:
+        rgba(255,255,255,.42);
+
+      backdrop-filter:
+        blur(12px);
+
+      border-radius: 18px;
+    }
+
+    .trust-item {
+      min-height: 82px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 20px;
+
+      border-right:
+        1px solid var(--line);
+
+      color: #525d55;
+
+      font-size: .78rem;
+      font-weight: 500;
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-icon {
+      width: 32px;
+      height: 32px;
+
+      flex: 0 0 auto;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        var(--gold-line);
+
+      border-radius: 50%;
+
+      color: var(--gold-dark);
+
+      background:
+        rgba(255,255,255,.5);
+    }
+
+
+    /* ==========================================================
+       ABOUT
+       ========================================================== */
+
+    .about {
+      overflow: hidden;
+    }
+
+    .about::before {
+      position: absolute;
+
+      top: 15%;
+      left: -180px;
+
+      width: 400px;
+      height: 400px;
+
+      content: "";
+
+      background:
+        rgba(170,183,164,.22);
+
+      border-radius: 50%;
+
+      filter: blur(80px);
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        .95fr 1.05fr;
+
+      align-items: center;
+
+      gap:
+        clamp(50px,8vw,105px);
+    }
+
+    .about-visual {
+      position: relative;
+
+      min-height: 650px;
+    }
+
+    .about-main-img {
+      position: absolute;
+
+      inset:
+        0 15% 12% 0;
+
+      overflow: hidden;
+
+      border-radius:
+        180px 180px
+        24px 24px;
+
+      background:
+        var(--sage-soft);
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .about-main-img img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-small-img {
+      position: absolute;
+
+      right: 0;
+      bottom: 0;
+
+      width: 44%;
+      height: 47%;
+
+      overflow: hidden;
+
+      border:
+        8px solid var(--cream);
+
+      border-radius:
+        120px 120px
+        18px 18px;
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .about-small-img img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .seal {
+      position: absolute;
+      z-index: 4;
+
+      top: 45%;
+      right: 3%;
+
+      width: 125px;
+      height: 125px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid var(--gold-line);
+
+      border-radius: 50%;
+
+      color: var(--gold-dark);
+
+      background:
+        rgba(255,253,248,.88);
+
+      backdrop-filter:
+        blur(12px);
+
+      box-shadow:
+        var(--shadow-soft);
+
+      text-align: center;
+    }
+
+    .seal strong {
+      display: block;
+
+      font-family: var(--serif);
+      font-size: 1.4rem;
+    }
+
+    .seal small {
+      display: block;
+
+      color: var(--sage-dark);
+
+      font-size: .55rem;
+
+      letter-spacing: .17em;
+
+      text-transform: uppercase;
+    }
+
+    .detail-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 14px;
+
+      margin-top: 38px;
+    }
+
+    .detail-card {
+      min-height: 158px;
+
+      padding: 23px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 20px;
+
+      background:
+        rgba(255,255,255,.6);
+
+      box-shadow:
+        0 8px 25px
+        rgba(68,63,51,.04);
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .detail-card:hover {
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        var(--shadow-soft);
+    }
+
+    .detail-card span {
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 18px;
+
+      border:
+        1px solid
+        var(--gold-line);
+
+      border-radius: 50%;
+
+      color: var(--gold-dark);
+
+      font-family:
+        var(--serif);
+    }
+
+    .detail-card h3 {
+      margin-bottom: 7px;
+
+      color: var(--olive);
+
+      font-family: var(--sans);
+      font-size: .88rem;
+      font-weight: 500;
+
+      line-height: 1.4;
+    }
+
+    .detail-card p {
+      margin-bottom: 0;
+
+      color: var(--muted);
+
+      font-size: .76rem;
+      line-height: 1.6;
+    }
+
+
+    /* ==========================================================
+       EXPERIENCE
+       ========================================================== */
+
+    .experience {
+      background:
+        linear-gradient(
+          rgba(243,239,229,.90),
+          rgba(243,239,229,.90)
+        ),
+        url(
+          "https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg"
+        )
+        center / cover fixed;
+    }
+
+    .experience-head {
+      max-width: 770px;
+
+      margin-bottom: 65px;
+    }
+
+    .experience-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      border-top:
+        1px solid var(--gold-line);
+
+      border-bottom:
+        1px solid var(--gold-line);
+
+      background:
+        rgba(255,255,255,.3);
+
+      backdrop-filter:
+        blur(8px);
+    }
+
+    .experience-card {
+      min-height: 330px;
+
+      padding:
+        36px 28px;
+
+      border-right:
+        1px solid var(--gold-line);
+    }
+
+    .experience-card:last-child {
+      border-right: 0;
+    }
+
+    .step-no {
+      display: block;
+
+      margin-bottom: 75px;
+
+      color: var(--gold);
+
+      font-family: var(--serif);
+
+      font-size: 3.8rem;
+
+      line-height: 1;
+
+      opacity: .55;
+    }
+
+    .experience-card h3 {
+      margin-bottom: 15px;
+
+      color: var(--olive);
+    }
+
+    .experience-card p {
+      margin-bottom: 0;
+
+      color: var(--muted);
+
+      font-size: .85rem;
+    }
+
+
+    /* ==========================================================
+       SERVICES
+       ========================================================== */
+
+    .services {
+      background:
+        var(--ivory);
+    }
+
+    .services-head {
+      display: grid;
+
+      grid-template-columns:
+        1fr .7fr;
+
+      align-items: end;
+
+      gap: 45px;
+
+      margin-bottom: 60px;
+    }
+
+    .services-head .lead {
+      justify-self: end;
+
+      max-width: 440px;
+    }
+
+    .service-list {
+      display: grid;
+
+      gap: 34px;
+    }
+
+    .service-card {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0,1.03fr)
+        minmax(0,.97fr);
+
+      overflow: hidden;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        30px;
+
+      background:
+        #faf8f2;
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .service-card:nth-child(even)
+    .service-carousel {
+      order: 2;
+    }
+
+    .service-carousel {
+      position: relative;
+
+      min-height: 610px;
+
+      overflow: hidden;
+
+      background:
+        var(--sage-soft);
+    }
+
+    .service-slide {
+      position: absolute;
+      inset: 0;
+
+      opacity: 0;
+
+      transition:
+        opacity .9s ease;
+    }
+
+    .service-slide.active {
+      opacity: 1;
+    }
+
+    .service-slide img {
+      height: 100%;
+
+      object-fit: cover;
+
+      transform:
+        scale(1.02);
+
+      transition:
+        transform 6s ease;
+    }
+
+    .service-slide.active img {
+      transform:
+        scale(1.08);
+    }
+
+    .service-carousel::after {
+      position: absolute;
+      z-index: 2;
+
+      inset: 0;
+
+      content: "";
+
+      background:
+        linear-gradient(
+          0deg,
+          rgba(32,44,35,.22),
+          transparent 42%
+        );
+
+      pointer-events: none;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      z-index: 4;
+
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+
+      display: flex;
+      justify-content: center;
+
+      gap: 8px;
+    }
+
+    .carousel-dot {
+      width: 22px;
+      height: 3px;
+
+      padding: 0;
+
+      border: 0;
+      border-radius: 999px;
+
+      background:
+        rgba(255,255,255,.5);
+
+      cursor: pointer;
+
+      transition:
+        width .3s ease,
+        background .3s ease;
+    }
+
+    .carousel-dot.active {
+      width: 40px;
+
+      background:
+        #fff;
+    }
+
+    .service-content {
+      min-width: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding:
+        clamp(38px,5vw,70px);
+    }
+
+    .service-number {
+      margin-bottom: 20px;
+
+      color: var(--gold-dark);
+
+      font-size: .68rem;
+      font-weight: 600;
+
+      letter-spacing: .2em;
+
+      text-transform: uppercase;
+    }
+
+    .service-content h3 {
+      margin-bottom: 20px;
+
+      color: var(--olive);
+
+      font-size:
+        clamp(2.7rem,4.2vw,4.5rem);
+    }
+
+    .service-desc {
+      max-width: 540px;
+
+      margin-bottom: 27px;
+
+      color: var(--muted);
+
+      font-size: .92rem;
+    }
+
+    .service-meta {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-bottom: 30px;
+    }
+
+    .service-meta span {
+      padding: 7px 12px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 999px;
+
+      color: #6b746c;
+
+      background:
+        rgba(255,255,255,.65);
+
+      font-size: .67rem;
+    }
+
+    .pricing {
+      margin: 0 0 31px;
+      padding: 0;
+
+      border-top:
+        1px solid var(--line);
+
+      list-style: none;
+    }
+
+    .price-row {
+      min-height: 65px;
+
+      display: grid;
+
+      grid-template-columns:
+        auto 1fr auto;
+
+      align-items: center;
+
+      gap: 15px;
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .price-row .time {
+      color: var(--brown);
+
+      font-size: .84rem;
+    }
+
+    .price-line {
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold-line),
+          transparent
+        );
+    }
+
+    .price {
+      color: var(--gold-dark);
+
+      font-family: var(--serif);
+
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+
+    .service-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 11px;
+    }
+
+
+    /* ==========================================================
+       CONTACT CTA
+       ========================================================== */
+
+    .contact-cta {
+      position: relative;
+
+      overflow: hidden;
+
+      padding:
+        clamp(78px,9vw,125px) 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          #dce4d8,
+          #f1eadf
+        );
+    }
+
+    .contact-cta::before {
+      position: absolute;
+
+      top: -150px;
+      right: -110px;
+
+      width: 400px;
+      height: 400px;
+
+      content: "";
+
+      border-radius: 50%;
+
+      background:
+        rgba(255,255,255,.52);
+
+      filter: blur(10px);
+    }
+
+    .cta-shell {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns:
+        1.05fr .95fr;
+
+      align-items: center;
+
+      gap:
+        clamp(45px,8vw,100px);
+
+      padding:
+        clamp(38px,6vw,70px);
+
+      border:
+        1px solid
+        rgba(255,255,255,.7);
+
+      border-radius: 32px;
+
+      background:
+        rgba(255,255,255,.53);
+
+      backdrop-filter:
+        blur(15px);
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .cta-shell h2 {
+      margin-bottom: 20px;
+    }
+
+    .cta-actions {
+      display: grid;
+
+      gap: 14px;
+    }
+
+    .cta-big {
+      min-height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      padding:
+        18px 25px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 20px;
+
+      background:
+        rgba(255,255,255,.72);
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+    }
+
+    .cta-big:hover {
+      transform:
+        translateY(-4px);
+
+      border-color:
+        var(--gold-line);
+
+      box-shadow:
+        var(--shadow-soft);
+    }
+
+    .cta-big small {
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: var(--muted);
+
+      font-size: .63rem;
+      font-weight: 600;
+
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .cta-big strong {
+      color: var(--olive);
+
+      font-family: var(--serif);
+
+      font-size:
+        clamp(1.45rem,2.4vw,2.1rem);
+
+      font-weight: 500;
+    }
+
+    .cta-arrow {
+      width: 44px;
+      height: 44px;
+
+      flex: 0 0 auto;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      color: white;
+
+      background:
+        var(--sage-dark);
+    }
+
+
+    /* ==========================================================
+       GALLERY
+       ========================================================== */
+
+    .gallery-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      gap: 45px;
+
+      margin-bottom: 50px;
+    }
+
+    .gallery-head p {
+      max-width: 430px;
+
+      margin-bottom: 8px;
+
+      color: var(--muted);
+    }
+
+    .gallery-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.15fr .85fr .9fr;
+
+      grid-template-rows:
+        310px 310px;
+
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+
+      overflow: hidden;
+
+      margin: 0;
+
+      border-radius: 24px;
+
+      background:
+        var(--sage-soft);
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-row: 1 / 3;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: 2 / 4;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+
+      transition:
+        transform .7s ease;
+    }
+
+    .gallery-item:hover img {
+      transform:
+        scale(1.05);
+    }
+
+    .gallery-item::after {
+      position: absolute;
+      inset: 0;
+
+      content: "";
+
+      background:
+        linear-gradient(
+          0deg,
+          rgba(32,45,35,.48),
+          transparent 48%
+        );
+    }
+
+    .gallery-label {
+      position: absolute;
+      z-index: 2;
+
+      left: 24px;
+      right: 24px;
+      bottom: 22px;
+
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+
+      gap: 15px;
+
+      color: white;
+    }
+
+    .gallery-label strong {
+      font-family: var(--serif);
+
+      font-size: 1.55rem;
+      font-weight: 500;
+    }
+
+    .gallery-label span {
+      font-size: .6rem;
+
+      letter-spacing: .15em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* ==========================================================
+       REVIEWS
+       ========================================================== */
+
+    .reviews {
+      overflow: hidden;
+
+      background:
+        #eee9df;
+    }
+
+    .reviews-head {
+      max-width: 720px;
+
+      margin-inline: auto;
+      margin-bottom: 48px;
+
+      text-align: center;
+    }
+
+    .reviews-head .eyebrow {
+      justify-content: center;
+    }
+
+    .review-row {
+      width: max-content;
+
+      display: flex;
+
+      gap: 17px;
+
+      margin-bottom: 17px;
+
+      animation:
+        reviewLeft
+        58s linear infinite;
+
+      will-change:
+        transform;
+    }
+
+    .review-row.reverse {
+      animation-name:
+        reviewRight;
+
+      animation-duration:
+        64s;
+    }
+
+    .review-row:hover {
+      animation-play-state:
+        paused;
+    }
+
+    .review-card {
+      width:
+        min(410px,86vw);
+
+      min-height: 205px;
+
+      flex: 0 0 auto;
+
+      padding: 28px;
+
+      border:
+        1px solid
+        rgba(85,88,74,.12);
+
+      border-radius: 22px;
+
+      background:
+        rgba(255,255,255,.72);
+
+      box-shadow:
+        0 8px 30px
+        rgba(75,68,54,.04);
+    }
+
+    .stars {
+      margin-bottom: 18px;
+
+      color: var(--gold);
+
+      font-size: .78rem;
+
+      letter-spacing: .15em;
+    }
+
+    .review-card p {
+      margin-bottom: 20px;
+
+      color: #4e574f;
+
+      font-family: var(--serif);
+
+      font-size: 1.25rem;
+
+      line-height: 1.4;
+    }
+
+    .review-card small {
+      color: #929287;
+
+      font-size: .64rem;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+    }
+
+    @keyframes reviewLeft {
+      from {
+        transform:
+          translateX(0);
+      }
+
+      to {
+        transform:
+          translateX(
+            calc(-50% - 8.5px)
+          );
+      }
+    }
+
+    @keyframes reviewRight {
+      from {
+        transform:
+          translateX(
+            calc(-50% - 8.5px)
+          );
+      }
+
+      to {
+        transform:
+          translateX(0);
+      }
+    }
+
+
+    /* ==========================================================
+       FAQ
+       ========================================================== */
+
+    .faq-grid {
+      display: grid;
+
+      grid-template-columns:
+        .72fr 1.28fr;
+
+      gap:
+        clamp(50px,8vw,105px);
+    }
+
+    .faq-intro {
+      position: sticky;
+
+      top: 120px;
+
+      align-self: start;
+    }
+
+    .faq-list {
+      border-top:
+        1px solid var(--line);
+    }
+
+    .faq-item {
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .faq-button {
+      width: 100%;
+      min-height: 90px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr auto;
+
+      align-items: center;
+
+      gap: 20px;
+
+      padding: 24px 0;
+
+      border: 0;
+
+      color: var(--olive);
+
+      background: none;
+
+      text-align: left;
+
+      cursor: pointer;
+    }
+
+    .faq-button span:first-child {
+      font-family: var(--serif);
+
+      font-size:
+        clamp(1.35rem,2.2vw,1.85rem);
+    }
+
+    .faq-plus {
+      position: relative;
+
+      width: 32px;
+      height: 32px;
+
+      border:
+        1px solid
+        var(--gold-line);
+
+      border-radius: 50%;
+    }
+
+    .faq-plus::before,
+    .faq-plus::after {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      width: 11px;
+      height: 1px;
+
+      content: "";
+
+      background:
+        var(--gold-dark);
+
+      transform:
+        translate(-50%,-50%);
+
+      transition:
+        transform .3s ease;
+    }
+
+    .faq-plus::after {
+      transform:
+        translate(-50%,-50%)
+        rotate(90deg);
+    }
+
+    .faq-button[aria-expanded="true"]
+    .faq-plus::after {
+      transform:
+        translate(-50%,-50%)
+        rotate(0deg);
+    }
+
+    .faq-panel {
+      max-height: 0;
+
+      overflow: hidden;
+
+      transition:
+        max-height .4s ease;
+    }
+
+    .faq-panel p {
+      max-width: 720px;
+
+      margin: 0;
+
+      padding:
+        0 55px 28px 0;
+
+      color: var(--muted);
+
+      font-size: .88rem;
+    }
+
+
+    /* ==========================================================
+       CONTACT & MAP
+       ========================================================== */
+
+    .contact {
+      padding-top: 0;
+    }
+
+    .contact-shell {
+      min-height: 610px;
+
+      display: grid;
+
+      grid-template-columns:
+        .85fr 1.15fr;
+
+      overflow: hidden;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 32px;
+
+      background:
+        var(--ivory);
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .contact-copy {
+      padding:
+        clamp(40px,6vw,70px);
+    }
+
+    .contact-list {
+      margin:
+        40px 0;
+    }
+
+    .contact-row {
+      display: grid;
+
+      grid-template-columns:
+        100px 1fr;
+
+      gap: 20px;
+
+      padding: 18px 0;
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .contact-row:first-child {
+      border-top:
+        1px solid var(--line);
+    }
+
+    .contact-row strong {
+      color: #99968a;
+
+      font-size: .64rem;
+      font-weight: 600;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+    }
+
+    .contact-row span,
+    .contact-row a {
+      color: #505a52;
+
+      font-size: .87rem;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 11px;
+    }
+
+    .map-wrap {
+      min-height: 580px;
+
+      background:
+        var(--sage-soft);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+
+      min-height: 610px;
+
+      display: block;
+
+      border: 0;
+
+      filter:
+        saturate(.72)
+        sepia(.06)
+        brightness(1.06);
+    }
+
+
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
+
+    .footer {
+      padding:
+        55px 0 28px;
+
+      border-top:
+        1px solid var(--line);
+
+      background:
+        #ece7dd;
+    }
+
+    .footer-top {
+      display: grid;
+
+      grid-template-columns:
+        1fr auto;
+
+      align-items: end;
+
+      gap: 50px;
+
+      padding-bottom: 45px;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+
+      color: var(--olive);
+
+      font-size:
+        clamp(3.5rem,7vw,7rem);
+    }
+
+    .footer-brand p {
+      max-width: 500px;
+
+      margin:
+        16px 0 0;
+
+      color: var(--muted);
+
+      font-size: .83rem;
+    }
+
+    .footer-nav {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,auto);
+
+      gap:
+        12px 35px;
+    }
+
+    .footer-nav a {
+      color: #656d66;
+
+      font-size: .75rem;
+    }
+
+    .footer-nav a:hover {
+      color: var(--gold-dark);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      padding-top: 22px;
+
+      border-top:
+        1px solid var(--line);
+
+      color: #8d8a80;
+
+      font-size: .65rem;
+    }
+
+
+    /* ==========================================================
+       FLOATING CONTACT BUTTONS
+       ========================================================== */
+
+    .floating-contact {
+      position: fixed;
+      z-index: 850;
+
+      right: 20px;
+      bottom: 20px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 9px;
+    }
+
+    .floating-button {
+      width: 56px;
+      height: 56px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 12px 30px
+        rgba(55,67,57,.18);
+
+      transition:
+        transform .3s ease;
+    }
+
+    .floating-button:hover {
+      transform:
+        translateY(-4px);
+    }
+
+    .floating-button.call {
+      color: #fff;
+
+      background:
+        var(--sage-dark);
+    }
+
+    .floating-button.text {
+      color: #453b28;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ead9aa,
+          #cbaa66
+        );
+    }
+
+
+    /* ==========================================================
+       REVEAL
+       ========================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(28px);
+
+      transition:
+        opacity .8s ease,
+        transform .8s
+        cubic-bezier(.22,1,.36,1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* ==========================================================
+       TABLET
+       ========================================================== */
+
+    @media(max-width:980px) {
+
+      .nav-links {
+        position: fixed;
+        z-index: 1001;
+
+        inset: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        gap: 22px;
+
+        padding:
+          100px 35px 40px;
+
+        background:
+          rgba(248,245,238,.98);
+
+        backdrop-filter:
+          blur(18px);
+
+        transform:
+          translateX(100%);
+
+        transition:
+          transform .45s
+          cubic-bezier(.22,1,.36,1);
+      }
+
+      .nav-links.open {
+        transform:
+          translateX(0);
+      }
+
+      .nav-links a:not(.btn) {
+        font-family: var(--serif);
+
+        font-size: 2rem;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .trust-row {
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .trust-item:nth-child(-n+2) {
+        border-bottom:
+          1px solid var(--line);
+      }
+
+      .about-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .about-visual {
+        min-height: 600px;
+      }
+
+      .experience-grid {
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .experience-card:nth-child(2) {
+        border-right: 0;
+      }
+
+      .experience-card:nth-child(-n+2) {
+        border-bottom:
+          1px solid var(--gold-line);
+      }
+
+      .services-head {
+        grid-template-columns:
+          1fr;
+      }
+
+      .services-head .lead {
+        justify-self: start;
+      }
+
+      .service-card {
+        grid-template-columns:
+          1fr;
+      }
+
+      .service-card:nth-child(even)
+      .service-carousel {
+        order: initial;
+      }
+
+      .service-carousel {
+        min-height: 520px;
+      }
+
+      .cta-shell {
+        grid-template-columns:
+          1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns:
+          1fr 1fr;
+
+        grid-template-rows:
+          410px 280px 280px;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+      }
+
+      .gallery-item:nth-child(4) {
+        grid-column: 1 / 3;
+      }
+
+      .faq-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .faq-intro {
+        position: static;
+      }
+
+      .contact-shell {
+        grid-template-columns:
+          1fr;
+      }
+
+      .map-wrap,
+      .map-wrap iframe {
+        min-height: 480px;
+      }
+
+    }
+
+
+    /* ==========================================================
+       MOBILE
+       ========================================================== */
+
+    @media(max-width:680px) {
+
+      .container {
+        width:
+          min(100% - 30px,1180px);
+      }
+
+      .section {
+        padding:
+          82px 0;
+      }
+
+      .nav {
+        min-height: 72px;
+      }
+
+      .hero {
+        min-height: 100svh;
+
+        padding:
+          125px 0 38px;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(250,247,239,.96),
+            rgba(250,247,239,.70)
+          ),
+          linear-gradient(
+            0deg,
+            rgba(247,243,234,.97),
+            rgba(247,243,234,.12) 65%
+          );
+      }
+
+      h1 {
+        font-size:
+          clamp(3.4rem,17vw,5.2rem);
+      }
+
+      .hero-actions {
+        display: grid;
+
+        grid-template-columns:
+          1fr;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .trust-row {
+        margin-top: 45px;
+      }
+
+      .trust-item {
+        min-height: 72px;
+
+        padding: 13px 10px;
+
+        font-size: .65rem;
+      }
+
+      .trust-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .about-visual {
+        min-height: 475px;
+      }
+
+      .about-main-img {
+        inset:
+          0 10% 10% 0;
+
+        border-radius:
+          120px 120px
+          18px 18px;
+      }
+
+      .about-small-img {
+        width: 43%;
+        height: 40%;
+
+        border-width: 5px;
+      }
+
+      .seal {
+        width: 95px;
+        height: 95px;
+
+        top: 50%;
+      }
+
+      .detail-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .detail-card {
+        min-height: auto;
+      }
+
+      .experience {
+        background-attachment:
+          scroll;
+      }
+
+      .experience-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .experience-card,
+      .experience-card:nth-child(2) {
+        min-height: auto;
+
+        border-right: 0;
+
+        border-bottom:
+          1px solid var(--gold-line);
+      }
+
+      .experience-card:last-child {
+        border-bottom: 0;
+      }
+
+      .step-no {
+        margin-bottom: 35px;
+      }
+
+      .service-card {
+        border-radius: 22px;
+      }
+
+      .service-carousel {
+        min-height: 390px;
+      }
+
+      .service-content {
+        padding:
+          34px 23px 38px;
+      }
+
+      .service-content h3 {
+        font-size: 2.7rem;
+      }
+
+      .service-actions {
+        display: grid;
+
+        grid-template-columns:
+          1fr;
+      }
+
+      .service-actions .btn {
+        width: 100%;
+      }
+
+      .cta-shell {
+        padding:
+          30px 20px;
+
+        border-radius: 23px;
+      }
+
+      .gallery-head {
+        display: block;
+      }
+
+      .gallery-grid {
+        grid-template-columns:
+          1fr;
+
+        grid-template-rows:
+          repeat(4,330px);
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(4) {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .contact-shell {
+        border-radius: 23px;
+      }
+
+      .contact-row {
+        grid-template-columns:
+          1fr;
+
+        gap: 5px;
+      }
+
+      .contact-actions {
+        display: grid;
+
+        grid-template-columns:
+          1fr;
+      }
+
+      .contact-actions .btn {
+        width: 100%;
+      }
+
+      .footer-top {
+        grid-template-columns:
+          1fr;
+      }
+
+      .footer-nav {
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+      }
+
+      .floating-contact {
+        right: 14px;
+        bottom: 14px;
+      }
+
+      .floating-button {
+        width: 52px;
+        height: 52px;
+      }
+
+    }
+
+
+    /* ==========================================================
+       REDUCED MOTION
+       ========================================================== */
+
+    @media(prefers-reduced-motion:reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ========================================================
+       HEADER
+       ======================================================== -->
+
+  <header class="site-header" id="siteHeader">
+
+    <div class="container nav">
+
+      <a
+        href="#home"
+        class="brand"
+        aria-label="Aura Spa Home"
+      >
+        <span class="brand-mark">A</span>
+
+        <span class="brand-name">
+          Aura Spa
+        </span>
+      </a>
+
+
+      <nav
+        class="nav-links"
+        id="navLinks"
+        aria-label="Main Navigation"
+      >
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
+        <a href="#reviews">
+          Reviews
+        </a>
+
+        <a href="#faq">
+          FAQ
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+        <a
+          href="tel:+16153497710"
+          class="btn btn-primary"
+        >
+          Call Now
+        </a>
+
+      </nav>
+
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ======================================================
+         HERO
+         ====================================================== -->
+
+    <section
+      class="hero"
+      id="home"
+      aria-label="Aura Spa introduction"
+    >
+
+      <div
+        class="hero-media"
+        id="heroCarousel"
+      >
+
+        <div class="hero-slide active">
+
+          <img
+            src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg"
+            alt="Relaxing body massage"
+          />
+
+        </div>
+
+
+        <div class="hero-slide">
+
+          <img
+            src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg"
+            alt="Calm massage setting"
+          />
+
+        </div>
+
+
+        <div class="hero-slide">
+
+          <img
+            src="https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg"
+            alt="Four hands massage"
+          />
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-glow"></div>
+
+
+      <div class="container hero-content">
+
+        <div class="eyebrow">
+          Nashville · Tennessee
+        </div>
+
+
+        <h1>
+
+          Find your quiet.
+
+          <span class="gold">
+            Feel renewed.
+          </span>
+
+        </h1>
+
+
+        <p class="hero-sub">
+
+          A calm, private massage environment
+          designed for those moments when you
+          simply need to slow down, relax and
+          step away from the pace of the day.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            href="tel:+16153497710"
+            class="btn btn-primary"
+          >
+            ☎ Call 615-349-7710
+          </a>
+
+
+          <a
+            href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20I%20would%20like%20to%20ask%20about%20massage%20availability."
+            class="btn btn-gold"
+          >
+            ✉ Send a Text
+          </a>
+
+        </div>
+
+
+        <div
+          class="trust-row"
+          aria-label="Aura Spa highlights"
+        >
+
+          <div class="trust-item">
+
+            <span class="trust-icon">
+              ✦
+            </span>
+
+            Quiet Atmosphere
+
+          </div>
+
+
+          <div class="trust-item">
+
+            <span class="trust-icon">
+              ◇
+            </span>
+
+            Private Rooms
+
+          </div>
+
+
+          <div class="trust-item">
+
+            <span class="trust-icon">
+              ○
+            </span>
+
+            Relaxing Environment
+
+          </div>
+
+
+          <div class="trust-item">
+
+            <span class="trust-icon">
+              ◷
+            </span>
+
+            Open Until 11 PM
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         ABOUT
+         ====================================================== -->
+
+    <section
+      class="section about"
+      id="about"
+    >
+
+      <div class="container about-grid">
+
+
+        <div class="about-visual reveal">
+
+          <div class="about-main-img">
+
+            <img
+              loading="lazy"
+              src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg"
+              alt="Peaceful massage atmosphere"
+            />
+
+          </div>
+
+
+          <div class="about-small-img">
+
+            <img
+              loading="lazy"
+              src="https://i.pinimg.com/736x/f6/33/48/f6334826491861572c8e532a6a099cdc.jpg"
+              alt="Relaxing massage setting"
+            />
+
+          </div>
+
+
+          <div class="seal">
+
+            <div>
+
+              <strong>
+                Aura
+              </strong>
+
+              <small>
+                Calm · Private
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="reveal">
+
+          <div class="eyebrow">
+            About Aura Spa
+          </div>
+
+
+          <h2>
+
+            A softer place
+
+            <span class="gold">
+              to slow down.
+            </span>
+
+          </h2>
+
+
+          <p class="lead">
+
+            Aura Spa offers a peaceful setting
+            centered around comfort, privacy,
+            cleanliness and an unhurried
+            atmosphere.
+
+          </p>
+
+
+          <p
+            style="
+              color:#7a7d74;
+              max-width:620px;
+            "
+          >
+
+            Step away from a long day and enter
+            a quiet space designed to feel calm
+            and composed. Soft surroundings,
+            comfortable treatment rooms and
+            thoughtful details create an easy
+            transition from busy to relaxed.
+
+          </p>
+
+
+          <div class="detail-grid">
+
+            <article class="detail-card">
+
+              <span>
+                01
+              </span>
+
+              <h3>
+                Quiet & Private
+              </h3>
+
+              <p>
+
+                A more personal atmosphere
+                designed to help you relax
+                without unnecessary distractions.
+
+              </p>
+
+            </article>
+
+
+            <article class="detail-card">
+
+              <span>
+                02
+              </span>
+
+              <h3>
+                Clean & Comfortable
+              </h3>
+
+              <p>
+
+                Carefully presented spaces
+                support a calm and welcoming
+                visit from arrival to finish.
+
+              </p>
+
+            </article>
+
+
+            <article class="detail-card">
+
+              <span>
+                03
+              </span>
+
+              <h3>
+                Unhurried Relaxation
+              </h3>
+
+              <p>
+
+                A chance to pause the day,
+                settle in and enjoy a quieter
+                rhythm for a while.
+
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         EXPERIENCE
+         ====================================================== -->
+
+    <section
+      class="section experience"
+      id="experience"
+    >
+
+      <div class="container">
+
+
+        <div class="experience-head reveal">
+
+          <div class="eyebrow">
+            The Aura Experience
+          </div>
+
+
+          <h2>
+
+            Simple details.
+
+            <span class="gold">
+              A calmer experience.
+            </span>
+
+          </h2>
+
+
+          <p class="lead">
+
+            Everything is designed around
+            creating a more comfortable,
+            peaceful and private visit.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="experience-grid reveal">
+
+
+          <article class="experience-card">
+
+            <span class="step-no">
+              01
+            </span>
+
+            <h3>
+              Calm Arrival
+            </h3>
+
+            <p>
+
+              Leave the noise outside and
+              transition into a slower,
+              quieter environment.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="experience-card">
+
+            <span class="step-no">
+              02
+            </span>
+
+            <h3>
+              Private Setting
+            </h3>
+
+            <p>
+
+              A comfortable atmosphere
+              created with personal space
+              and privacy in mind.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="experience-card">
+
+            <span class="step-no">
+              03
+            </span>
+
+            <h3>
+              Mindful Details
+            </h3>
+
+            <p>
+
+              Soft visual tones and
+              uncluttered surroundings
+              help create a calmer mood.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="experience-card">
+
+            <span class="step-no">
+              04
+            </span>
+
+            <h3>
+              Restful Finish
+            </h3>
+
+            <p>
+
+              Give yourself a quiet moment
+              before returning to the rest
+              of your day.
+
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         SERVICES
+         Only supplied services
+         ====================================================== -->
+
+    <section
+      class="section services"
+      id="services"
+    >
+
+      <div class="container">
+
+
+        <div class="services-head reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              Services & Pricing
+            </div>
+
+
+            <h2>
+
+              Choose your
+
+              <span class="gold">
+                time to unwind.
+              </span>
+
+            </h2>
+
+          </div>
+
+
+          <p class="lead">
+
+            Straightforward massage options
+            with clear pricing. Call or text
+            Aura Spa for current availability.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="service-list">
+
+
+          <!-- ==================================================
+               BODY MASSAGE
+               ================================================== -->
+
+          <article class="service-card reveal">
+
+
+            <div
+              class="service-carousel"
+              data-carousel
+              data-interval="4300"
+            >
+
+
+              <div class="service-slide active">
+
+                <img
+                  loading="lazy"
+                  src="https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg"
+                  alt="Body massage"
+                />
+
+              </div>
+
+
+              <div class="service-slide">
+
+                <img
+                  loading="lazy"
+                  src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg"
+                  alt="Relaxing body massage"
+                />
+
+              </div>
+
+
+              <div class="service-slide">
+
+                <img
+                  loading="lazy"
+                  src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg"
+                  alt="Body massage experience"
+                />
+
+              </div>
+
+
+              <div class="service-slide">
+
+                <img
+                  loading="lazy"
+                  src="https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg"
+                  alt="Comfortable body massage"
+                />
+
+              </div>
+
+
+              <div class="service-slide">
+
+                <img
+                  loading="lazy"
+                  src="https://i.pinimg.com/736x/f6/33/48/f6334826491861572c8e532a6a099cdc.jpg"
+                  alt="Body massage in relaxing surroundings"
+                />
+
+              </div>
+
+
+              <div
+                class="carousel-dots"
+                aria-label="Body Massage image controls"
+              ></div>
+
+            </div>
+
+
+
+            <div class="service-content">
+
+
+              <span class="service-number">
+                Service 01
+              </span>
+
+
+              <h3>
+                Body Massage
+              </h3>
+
+
+              <p class="service-desc">
+
+                A full-body relaxation experience
+                for guests looking to step away
+                from daily tension, long workdays
+                or general fatigue. Choose a
+                shorter reset or allow more time
+                for an unhurried session.
+
+              </p>
+
+
+              <div class="service-meta">
+
+                <span>
+                  Full Body
+                </span>
+
+                <span>
+                  Quiet Setting
+                </span>
+
+                <span>
+                  Flexible Duration
+                </span>
+
+              </div>
+
+
+              <ul
+                class="pricing"
+                aria-label="Body Massage pricing"
+              >
+
+
+                <li class="price-row">
+
+                  <span class="time">
+                    30 minutes
+                  </span>
+
+                  <span class="price-line"></span>
+
+                  <strong class="price">
+                    $50
+                  </strong>
+
+                </li>
+
+
+                <li class="price-row">
+
+                  <span class="time">
+                    60 minutes
+                  </span>
+
+                  <span class="price-line"></span>
+
+                  <strong class="price">
+                    $70
+                  </strong>
+
+                </li>
+
+
+                <li class="price-row">
+
+                  <span class="time">
+                    90 minutes
+                  </span>
+
+                  <span class="price-line"></span>
+
+                  <strong class="price">
+                    $110
+                  </strong>
+
+                </li>
+
+              </ul>
+
+
+              <div class="service-actions">
+
+
+                <a
+                  href="tel:+16153497710"
+                  class="btn btn-primary"
+                >
+                  ☎ Call Now
+                </a>
+
+
+                <a
+                  href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20I%20would%20like%20to%20ask%20about%20Body%20Massage%20availability."
+                  class="btn btn-gold"
+                >
+                  ✉ Text About This Service
+                </a>
+
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               FOUR HANDS MASSAGE
+               ================================================== -->
+
+          <article class="service-card reveal">
+
+
+            <div
+              class="service-carousel"
+              data-carousel
+              data-interval="4700"
+            >
+
+
+              <div class="service-slide active">
+
+                <img
+                  loading="lazy"
+                  src="https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg"
+                  alt="Four hands massage"
+                />
+
+              </div>
+
+
+              <div class="service-slide">
+
+                <img
+                  loading="lazy"
+                  src="https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg"
+                  alt="Four hands massage experience"
+                />
+
+              </div>
+
+
+              <div class="service-slide">
+
+                <img
+                  loading="lazy"
+                  src="https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg"
+                  alt="Four hands massage session"
+                />
+
+              </div>
+
+
+              <div
+                class="carousel-dots"
+                aria-label="Four Hands Massage image controls"
+              ></div>
+
+            </div>
+
+
+
+            <div class="service-content">
+
+
+              <span class="service-number">
+                Service 02
+              </span>
+
+
+              <h3>
+                Four Hands Massage
+              </h3>
+
+
+              <p class="service-desc">
+
+                A coordinated massage with two
+                practitioners working in
+                synchronized rhythm. The
+                overlapping movements create an
+                immersive experience for guests
+                who want to completely switch
+                off and relax.
+
+              </p>
+
+
+              <div class="service-meta">
+
+                <span>
+                  Synchronized Rhythm
+                </span>
+
+                <span>
+                  Immersive Relaxation
+                </span>
+
+                <span>
+                  Private Setting
+                </span>
+
+              </div>
+
+
+              <ul
+                class="pricing"
+                aria-label="Four Hands Massage pricing"
+              >
+
+
+                <li class="price-row">
+
+                  <span class="time">
+                    30 minutes
+                  </span>
+
+                  <span class="price-line"></span>
+
+                  <strong class="price">
+                    $90
+                  </strong>
+
+                </li>
+
+
+                <li class="price-row">
+
+                  <span class="time">
+                    60 minutes
+                  </span>
+
+                  <span class="price-line"></span>
+
+                  <strong class="price">
+                    $130
+                  </strong>
+
+                </li>
+
+              </ul>
+
+
+              <div class="service-actions">
+
+
+                <a
+                  href="tel:+16153497710"
+                  class="btn btn-primary"
+                >
+                  ☎ Call Now
+                </a>
+
+
+                <a
+                  href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20I%20would%20like%20to%20ask%20about%20Four%20Hands%20Massage%20availability."
+                  class="btn btn-gold"
+                >
+                  ✉ Text About This Service
+                </a>
+
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         DIRECT CONTACT CTA
+         No booking form
+         ====================================================== -->
+
+    <section
+      class="contact-cta"
+      aria-label="Contact Aura Spa"
+    >
+
+      <div class="container">
+
+
+        <div class="cta-shell reveal">
+
+
+          <div>
+
+            <div class="eyebrow">
+              Plan Your Visit
+            </div>
+
+
+            <h2>
+
+              Ready for a
+
+              <span class="gold">
+                quieter moment?
+              </span>
+
+            </h2>
+
+
+            <p class="lead">
+
+              No online forms. Simply call or
+              text Aura Spa directly to ask
+              about current availability.
+
+            </p>
+
+          </div>
+
+
+
+          <div class="cta-actions">
+
+
+            <a
+              href="tel:+16153497710"
+              class="cta-big"
+            >
+
+              <div>
+
+                <small>
+                  Call Aura Spa
+                </small>
+
+                <strong>
+                  615-349-7710
+                </strong>
+
+              </div>
+
+              <span class="cta-arrow">
+                ☎
+              </span>
+
+            </a>
+
+
+
+            <a
+              href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20I%20would%20like%20to%20ask%20about%20massage%20availability."
+              class="cta-big"
+            >
+
+              <div>
+
+                <small>
+                  Send a Message
+                </small>
+
+                <strong>
+                  Text Aura Spa
+                </strong>
+
+              </div>
+
+              <span class="cta-arrow">
+                ✉
+              </span>
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         GALLERY
+         ====================================================== -->
+
+    <section
+      class="section"
+      aria-label="Aura Spa atmosphere"
+    >
+
+      <div class="container">
+
+
+        <div class="gallery-head reveal">
+
+
+          <div>
+
+            <div class="eyebrow">
+              Atmosphere
+            </div>
+
+
+            <h2>
+
+              A peaceful
+
+              <span class="gold">
+                place to pause.
+              </span>
+
+            </h2>
+
+          </div>
+
+
+          <p>
+
+            A bright, calm presentation
+            balanced with warm tones,
+            privacy and a relaxed sense
+            of space.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="gallery-grid reveal">
+
+
+          <figure class="gallery-item">
+
+            <img
+              loading="lazy"
+              src="https://i.pinimg.com/736x/e6/0b/e7/e60be71086090d2d3f2737b2291242a9.jpg"
+              alt="Relaxing body massage atmosphere"
+            />
+
+            <figcaption class="gallery-label">
+
+              <strong>
+                Slow Down
+              </strong>
+
+              <span>
+                Aura Spa
+              </span>
+
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure class="gallery-item">
+
+            <img
+              loading="lazy"
+              src="https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg"
+              alt="Comfortable body massage"
+            />
+
+            <figcaption class="gallery-label">
+
+              <strong>
+                Quiet Comfort
+              </strong>
+
+              <span>
+                Nashville
+              </span>
+
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure class="gallery-item">
+
+            <img
+              loading="lazy"
+              src="https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg"
+              alt="Four hands massage"
+            />
+
+            <figcaption class="gallery-label">
+
+              <strong>
+                Unhurried
+              </strong>
+
+              <span>
+                Relax
+              </span>
+
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure class="gallery-item">
+
+            <img
+              loading="lazy"
+              src="https://i.pinimg.com/736x/97/dc/96/97dc9699bc6c850ecd8776eaee3b7898.jpg"
+              alt="Relaxing massage environment"
+            />
+
+            <figcaption class="gallery-label">
+
+              <strong>
+                Your Time
+              </strong>
+
+              <span>
+                Rest · Reset
+              </span>
+
+            </figcaption>
+
+          </figure>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         REVIEWS
+         ====================================================== -->
+
+    <section
+      class="section reviews"
+      id="reviews"
+    >
+
+
+      <div class="reviews-head container reveal">
+
+        <div class="eyebrow">
+          Guest Impressions
+        </div>
+
+
+        <h2>
+
+          Calm feels
+
+          <span class="gold">
+            different here.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+
+      <!-- ROW ONE -->
+
+      <div class="review-row">
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Such a quiet and comfortable
+            atmosphere. The space immediately
+            helped me slow down.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The environment felt clean,
+            private and peaceful from the
+            moment I arrived.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “I appreciated the relaxed pace
+            and how easy it was to call ahead
+            and check availability.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “A comfortable place to step away
+            from a long day. Everything felt
+            calm and thoughtfully presented.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Quiet rooms, a relaxing mood and
+            a very straightforward experience.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <!-- duplicate -->
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Such a quiet and comfortable
+            atmosphere. The space immediately
+            helped me slow down.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The environment felt clean,
+            private and peaceful from the
+            moment I arrived.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “I appreciated the relaxed pace
+            and how easy it was to call ahead
+            and check availability.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “A comfortable place to step away
+            from a long day. Everything felt
+            calm and thoughtfully presented.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Quiet rooms, a relaxing mood and
+            a very straightforward experience.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+      </div>
+
+
+
+      <!-- ROW TWO -->
+
+      <div class="review-row reverse">
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The late hours are convenient
+            and the overall atmosphere feels
+            peaceful and unhurried.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “A simple, calm environment that
+            made it easy to relax for a while.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “I liked the privacy and the
+            understated atmosphere. Very
+            comfortable.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Everything felt neat, welcoming
+            and easy from arrival to finish.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The kind of environment where
+            you can disconnect from the day
+            for a little while.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <!-- duplicate -->
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The late hours are convenient
+            and the overall atmosphere feels
+            peaceful and unhurried.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “A simple, calm environment that
+            made it easy to relax for a while.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “I liked the privacy and the
+            understated atmosphere. Very
+            comfortable.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Everything felt neat, welcoming
+            and easy from arrival to finish.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The kind of environment where
+            you can disconnect from the day
+            for a little while.”
+          </p>
+
+          <small>
+            Guest Impression
+          </small>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         FAQ
+         ====================================================== -->
+
+    <section
+      class="section"
+      id="faq"
+    >
+
+      <div class="container faq-grid">
+
+
+        <div class="faq-intro reveal">
+
+          <div class="eyebrow">
+            Frequently Asked
+          </div>
+
+
+          <h2>
+
+            Before
+
+            <span class="gold">
+              you arrive.
+            </span>
+
+          </h2>
+
+
+          <p class="lead">
+
+            Need more information?
+            Call or text Aura Spa directly.
+
+          </p>
+
+
+          <div
+            style="
+              display:flex;
+              flex-wrap:wrap;
+              gap:10px;
+              margin-top:22px;
+            "
+          >
+
+            <a
+              href="tel:+16153497710"
+              class="btn btn-primary"
+            >
+              Call
+            </a>
+
+
+            <a
+              href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20I%20have%20a%20question."
+              class="btn btn-gold"
+            >
+              Text
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="faq-list reveal">
+
+
+          <div class="faq-item">
+
+            <button
+              type="button"
+              class="faq-button"
+              aria-expanded="false"
+              aria-controls="faq1"
+            >
+
+              <span>
+                How early should I arrive?
+              </span>
+
+              <span
+                class="faq-plus"
+                aria-hidden="true"
+              ></span>
+
+            </button>
+
+
+            <div
+              class="faq-panel"
+              id="faq1"
+            >
+
+              <p>
+
+                Arriving a few minutes before
+                your planned visit can make
+                things easier. Call or text
+                Aura Spa if you would like
+                current arrival guidance.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="faq-item">
+
+            <button
+              type="button"
+              class="faq-button"
+              aria-expanded="false"
+              aria-controls="faq2"
+            >
+
+              <span>
+                Can I get a massage if I have an injury?
+              </span>
+
+              <span
+                class="faq-plus"
+                aria-hidden="true"
+              ></span>
+
+            </button>
+
+
+            <div
+              class="faq-panel"
+              id="faq2"
+            >
+
+              <p>
+
+                If you have a recent injury,
+                significant pain or a medical
+                condition, consider speaking
+                with a qualified healthcare
+                professional first. Please
+                mention relevant limitations
+                before your massage.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="faq-item">
+
+            <button
+              type="button"
+              class="faq-button"
+              aria-expanded="false"
+              aria-controls="faq3"
+            >
+
+              <span>
+                What is your cancellation policy?
+              </span>
+
+              <span
+                class="faq-plus"
+                aria-hidden="true"
+              ></span>
+
+            </button>
+
+
+            <div
+              class="faq-panel"
+              id="faq3"
+            >
+
+              <p>
+
+                Please call 615-349-7710
+                as soon as possible if your
+                plans change. Contact Aura Spa
+                directly for the current
+                cancellation or rescheduling
+                policy.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="faq-item">
+
+            <button
+              type="button"
+              class="faq-button"
+              aria-expanded="false"
+              aria-controls="faq4"
+            >
+
+              <span>
+                Is there parking available?
+              </span>
+
+              <span
+                class="faq-plus"
+                aria-hidden="true"
+              ></span>
+
+            </button>
+
+
+            <div
+              class="faq-panel"
+              id="faq4"
+            >
+
+              <p>
+
+                Parking conditions can vary.
+                Call or text before your visit
+                if you would like current
+                guidance for parking near
+                712 Meridian St.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         CONTACT
+         ====================================================== -->
+
+    <section
+      class="section contact"
+      id="contact"
+    >
+
+      <div class="container">
+
+
+        <div class="contact-shell reveal">
+
+
+          <div class="contact-copy">
+
+
+            <div class="eyebrow">
+              Contact & Location
+            </div>
+
+
+            <h2>
+
+              Find your
+
+              <span class="gold">
+                Aura.
+              </span>
+
+            </h2>
+
+
+            <p class="lead">
+
+              Visit Aura Spa on Meridian
+              Street in Nashville. Call or
+              text to check availability.
+
+            </p>
+
+
+
+            <div class="contact-list">
+
+
+              <div class="contact-row">
+
+                <strong>
+                  Address
+                </strong>
+
+                <span>
+
+                  712 Meridian St<br>
+                  Nashville, TN 37207
+
+                </span>
+
+              </div>
+
+
+
+              <div class="contact-row">
+
+                <strong>
+                  Phone
+                </strong>
+
+                <a
+                  href="tel:+16153497710"
+                >
+                  615-349-7710
+                </a>
+
+              </div>
+
+
+
+              <div class="contact-row">
+
+                <strong>
+                  Hours
+                </strong>
+
+                <span>
+                  9:00 AM – 11:00 PM
+                </span>
+
+              </div>
+
+
+            </div>
+
+
+
+            <div class="contact-actions">
+
+
+              <a
+                href="tel:+16153497710"
+                class="btn btn-primary"
+              >
+                ☎ Call Aura Spa
+              </a>
+
+
+              <a
+                href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20I%20would%20like%20to%20ask%20about%20massage%20availability."
+                class="btn btn-gold"
+              >
+                ✉ Send Text
+              </a>
+
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=712+Meridian+St+Nashville+TN+37207"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+              >
+                Directions
+              </a>
+
+
+            </div>
+
+          </div>
+
+
+
+          <div class="map-wrap">
+
+            <iframe
+              loading="lazy"
+              title="Aura Spa location at 712 Meridian St Nashville Tennessee"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=712+Meridian+St,+Nashville,+TN+37207&output=embed"
+              allowfullscreen
+            ></iframe>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+
+      <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+          <h2>
+            Aura Spa.
+          </h2>
+
+
+          <p>
+
+            A quiet, comfortable and private
+            place to slow down in Nashville,
+            Tennessee.
+
+          </p>
+
+        </div>
+
+
+
+        <nav
+          class="footer-nav"
+          aria-label="Footer navigation"
+        >
+
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#services">
+            Services
+          </a>
+
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#experience">
+            Experience
+          </a>
+
+          <a href="#reviews">
+            Reviews
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+
+        </nav>
+
+
+      </div>
+
+
+
+      <div class="footer-bottom">
+
+        <span>
+
+          ©
+          <span id="year"></span>
+          Aura Spa.
+          All rights reserved.
+
+        </span>
+
+
+        <span>
+
+          712 Meridian St,
+          Nashville, TN 37207 ·
+
+          <a href="tel:+16153497710">
+            615-349-7710
+          </a>
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ========================================================
+       FLOATING CALL + TEXT
+       ======================================================== -->
+
+  <div
+    class="floating-contact"
+    aria-label="Contact Aura Spa"
+  >
+
+
+    <a
+      href="tel:+16153497710"
+      class="floating-button call"
+      aria-label="Call Aura Spa"
+      title="Call Aura Spa"
+    >
+      ☎
+    </a>
+
+
+    <a
+      href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20I%20would%20like%20to%20ask%20about%20massage%20availability."
+      class="floating-button text"
+      aria-label="Text Aura Spa"
+      title="Text Aura Spa"
+    >
+      ✉
+    </a>
+
+
+  </div>
+
+
+
+  <script>
+
+    /* ==========================================================
+       CURRENT YEAR
+       ========================================================== */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+
+    /* ==========================================================
+       HEADER
+       ========================================================== */
+
+    const header =
+      document.getElementById("siteHeader");
+
+
+    function updateHeader() {
+
+      header.classList.toggle(
+        "scrolled",
+        window.scrollY > 25
+      );
+
+    }
+
+
+    updateHeader();
+
+
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      { passive:true }
+    );
+
+
+
+    /* ==========================================================
+       MOBILE NAV
+       ========================================================== */
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    function closeMenu() {
+
+      menuBtn.classList.remove("active");
+
+      navLinks.classList.remove("open");
+
+      document.body.classList.remove(
+        "menu-open"
+      );
+
+      menuBtn.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      menuBtn.setAttribute(
+        "aria-label",
+        "Open menu"
+      );
+
+    }
+
+
+    menuBtn.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          navLinks.classList.toggle(
+            "open"
+          );
+
+
+        menuBtn.classList.toggle(
+          "active",
+          isOpen
+        );
+
+
+        document.body.classList.toggle(
+          "menu-open",
+          isOpen
+        );
+
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+
+        menuBtn.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close menu"
+            : "Open menu"
+        );
+
+      }
+    );
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          closeMenu
+        );
+
+      });
+
+
+    window.addEventListener(
+      "resize",
+      () => {
+
+        if (
+          window.innerWidth > 980
+        ) {
+
+          closeMenu();
+
+        }
+
+      }
+    );
+
+
+
+    /* ==========================================================
+       HERO CAROUSEL
+       ========================================================== */
+
+    const heroSlides =
+      Array.from(
+        document.querySelectorAll(
+          "#heroCarousel .hero-slide"
+        )
+      );
+
+
+    let heroIndex = 0;
+
+
+    function changeHero() {
+
+      heroSlides[
+        heroIndex
+      ].classList.remove(
+        "active"
+      );
+
+
+      heroIndex =
+        (
+          heroIndex + 1
+        )
+        %
+        heroSlides.length;
+
+
+      heroSlides[
+        heroIndex
+      ].classList.add(
+        "active"
+      );
+
+    }
+
+
+    if (
+      heroSlides.length > 1
+    ) {
+
+      setInterval(
+        changeHero,
+        5600
+      );
+
+    }
+
+
+
+    /* ==========================================================
+       SERVICE CAROUSELS
+       ========================================================== */
+
+    document
+      .querySelectorAll(
+        "[data-carousel]"
+      )
+      .forEach(
+        carousel => {
+
+
+          const slides =
+            Array.from(
+              carousel.querySelectorAll(
+                ".service-slide"
+              )
+            );
+
+
+          const dotsContainer =
+            carousel.querySelector(
+              ".carousel-dots"
+            );
+
+
+          if (
+            slides.length <= 1
+          ) {
+
+            if (
+              dotsContainer
+            ) {
+
+              dotsContainer.style.display =
+                "none";
+
+            }
+
+            return;
+
+          }
+
+
+          let current = 0;
+
+
+          let timer;
+
+
+          const interval =
+            Number(
+              carousel.dataset.interval
+            )
+            ||
+            4500;
+
+
+
+          const dots =
+            slides.map(
+              (_, index) => {
+
+
+                const dot =
+                  document.createElement(
+                    "button"
+                  );
+
+
+                dot.type =
+                  "button";
+
+
+                dot.className =
+                  "carousel-dot";
+
+
+                dot.setAttribute(
+                  "aria-label",
+                  `Show image ${index + 1}`
+                );
+
+
+                if (
+                  index === 0
+                ) {
+
+                  dot.classList.add(
+                    "active"
+                  );
+
+                }
+
+
+                dotsContainer.appendChild(
+                  dot
+                );
+
+
+                dot.addEventListener(
+                  "click",
+                  () => {
+
+                    current =
+                      index;
+
+
+                    showSlide(
+                      current
+                    );
+
+
+                    restart();
+
+                  }
+                );
+
+
+                return dot;
+
+              }
+            );
+
+
+
+          function showSlide(index) {
+
+            slides.forEach(
+              (slide,i) => {
+
+                slide.classList.toggle(
+                  "active",
+                  i === index
+                );
+
+              }
+            );
+
+
+            dots.forEach(
+              (dot,i) => {
+
+                dot.classList.toggle(
+                  "active",
+                  i === index
+                );
+
+              }
+            );
+
+          }
+
+
+
+          function next() {
+
+            current =
+              (
+                current + 1
+              )
+              %
+              slides.length;
+
+
+            showSlide(
+              current
+            );
+
+          }
+
+
+
+          function start() {
+
+            timer =
+              setInterval(
+                next,
+                interval
+              );
+
+          }
+
+
+
+          function restart() {
+
+            clearInterval(
+              timer
+            );
+
+            start();
+
+          }
+
+
+
+          carousel.addEventListener(
+            "mouseenter",
+            () => {
+
+              clearInterval(
+                timer
+              );
+
+            }
+          );
+
+
+          carousel.addEventListener(
+            "mouseleave",
+            start
+          );
+
+
+          start();
+
+        }
+      );
+
+
+
+    /* ==========================================================
+       FAQ
+       ========================================================== */
+
+    const faqButtons =
+      document.querySelectorAll(
+        ".faq-button"
+      );
+
+
+    faqButtons.forEach(
+      button => {
+
+
+        button.addEventListener(
+          "click",
+          () => {
+
+
+            const panel =
+              document.getElementById(
+                button.getAttribute(
+                  "aria-controls"
+                )
+              );
+
+
+            const isOpen =
+              button.getAttribute(
+                "aria-expanded"
+              )
+              ===
+              "true";
+
+
+            faqButtons.forEach(
+              otherButton => {
+
+
+                const otherPanel =
+                  document.getElementById(
+                    otherButton.getAttribute(
+                      "aria-controls"
+                    )
+                  );
+
+
+                otherButton.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+
+
+                otherPanel.style.maxHeight =
+                  null;
+
+              }
+            );
+
+
+            if (
+              !isOpen
+            ) {
+
+              button.setAttribute(
+                "aria-expanded",
+                "true"
+              );
+
+
+              panel.style.maxHeight =
+                panel.scrollHeight
+                +
+                "px";
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* ==========================================================
+       SCROLL REVEAL
+       ========================================================== */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+
+    if (
+      "IntersectionObserver"
+      in
+      window
+    ) {
+
+
+      const observer =
+        new IntersectionObserver(
+          entries => {
+
+
+            entries.forEach(
+              entry => {
+
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target
+                    .classList
+                    .add(
+                      "visible"
+                    );
+
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold:.12,
+            rootMargin:
+              "0px 0px -30px 0px"
+          }
+        );
+
+
+      revealElements.forEach(
+        element => {
+
+          observer.observe(
+            element
+          );
+
+        }
+      );
+
+
+    } else {
+
+
+      revealElements.forEach(
+        element => {
+
+          element.classList.add(
+            "visible"
+          );
+
+        }
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
