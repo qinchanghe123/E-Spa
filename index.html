@@ -411,7 +411,7 @@
       align-items: center;
 
       gap:
-        clamp(16px, 2vw, 30px);
+        clamp(14px, 1.8vw, 26px);
     }
 
     .nav-links a:not(.btn) {
@@ -1015,6 +1015,7 @@
 
     /* ==========================================================
        SERVICES
+       Only supplied services
        ========================================================== */
 
     .services {
@@ -1300,6 +1301,157 @@
       flex-wrap: wrap;
 
       gap: 11px;
+    }
+
+
+    /* ==========================================================
+       MASSEUSES / THERAPISTS (NEW SECTION)
+       ========================================================== */
+
+    .masseuses {
+      background: var(--cream);
+    }
+
+    .masseuses-head {
+      max-width: 780px;
+      margin-bottom: 60px;
+    }
+
+    .therapist-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .therapist-card {
+      position: relative;
+      background: rgba(255, 253, 248, 0.85);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+    }
+
+    .therapist-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold-line);
+      box-shadow: var(--shadow);
+    }
+
+    .therapist-media {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      background: var(--sage-soft);
+    }
+
+    .therapist-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform .7s ease;
+    }
+
+    .therapist-card:hover .therapist-media img {
+      transform: scale(1.06);
+    }
+
+    .therapist-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(255, 253, 248, 0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--gold-line);
+      color: var(--gold-dark);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .therapist-info {
+      padding: 24px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .therapist-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .therapist-name {
+      color: var(--olive);
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .therapist-stats {
+      display: flex;
+      gap: 12px;
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+
+    .therapist-stats span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .therapist-desc {
+      font-size: 0.83rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+
+    .therapist-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .therapist-tag {
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.65rem;
+      color: #556258;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .therapist-actions {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .therapist-actions .btn {
+      min-height: 40px;
+      padding: 0 10px;
+      font-size: 0.68rem;
     }
 
 
@@ -2242,6 +2394,11 @@
         min-height: 520px;
       }
 
+      .therapist-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
       .cta-shell {
         grid-template-columns:
           1fr;
@@ -2452,6 +2609,15 @@
         width: 100%;
       }
 
+      .therapist-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .therapist-media {
+        height: 420px;
+      }
+
       .cta-shell {
         padding:
           30px 20px;
@@ -2596,6 +2762,10 @@
 
         <a href="#services">
           Services
+        </a>
+
+        <a href="#masseuses">
+          Masseuses
         </a>
 
         <a href="#experience">
@@ -3522,6 +3692,249 @@
                 </a>
 
 
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         MASSEUSES / THERAPISTS (NEW SECTION)
+         ====================================================== -->
+
+    <section
+      class="section masseuses"
+      id="masseuses"
+      aria-label="Aura Spa Therapists"
+    >
+
+      <div class="container">
+
+        <div class="masseuses-head reveal">
+
+          <div class="eyebrow">
+            Our Masseuses
+          </div>
+
+          <h2>
+            Charming & Attentive
+            <span class="gold">
+              Therapists.
+            </span>
+          </h2>
+
+          <p class="lead">
+            Meet our sweet, attractive, and skilled massage therapists. Dedicated to delivering soothing touch, deep relaxation, and an unforgettable private escape.
+          </p>
+
+        </div>
+
+
+        <div class="therapist-grid">
+
+
+          <!-- THERAPIST 1: MIA -->
+          <article class="therapist-card reveal">
+
+            <div class="therapist-media">
+              <img
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
+                alt="Mia - Aura Spa Masseuse"
+              />
+              <span class="therapist-badge">
+                Available Today
+              </span>
+            </div>
+
+            <div class="therapist-info">
+
+              <div class="therapist-top">
+                <h3 class="therapist-name">Mia</h3>
+              </div>
+
+              <div class="therapist-stats">
+                <span>✦ 23 yrs</span>
+                <span>◇ 5'4"</span>
+                <span>○ 110 lbs</span>
+              </div>
+
+              <p class="therapist-desc">
+                Sweet smile, slender beauty with delicate yet firm hands. Specializes in full body soothing relief, Swedish, and deep muscle relaxation.
+              </p>
+
+              <div class="therapist-tags">
+                <span class="therapist-tag">Deep Tissue</span>
+                <span class="therapist-tag">Swedish</span>
+                <span class="therapist-tag">Gentle Touch</span>
+              </div>
+
+              <div class="therapist-actions">
+                <a href="tel:+16153497710" class="btn btn-primary">
+                  ☎ Call
+                </a>
+                <a href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20is%20Mia%20available%20today%3F" class="btn btn-gold">
+                  ✉ Text
+                </a>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- THERAPIST 2: COCO -->
+          <article class="therapist-card reveal">
+
+            <div class="therapist-media">
+              <img
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop"
+                alt="Coco - Aura Spa Masseuse"
+              />
+              <span class="therapist-badge">
+                Available Today
+              </span>
+            </div>
+
+            <div class="therapist-info">
+
+              <div class="therapist-top">
+                <h3 class="therapist-name">Coco</h3>
+              </div>
+
+              <div class="therapist-stats">
+                <span>✦ 25 yrs</span>
+                <span>◇ 5'5"</span>
+                <span>○ 115 lbs</span>
+              </div>
+
+              <p class="therapist-desc">
+                Enthusiastic and graceful with wonderful rhythm. Expert in four-hands synchronized massage and melting away all workday stress.
+              </p>
+
+              <div class="therapist-tags">
+                <span class="therapist-tag">Four Hands</span>
+                <span class="therapist-tag">Acupressure</span>
+                <span class="therapist-tag">Sweet & Caring</span>
+              </div>
+
+              <div class="therapist-actions">
+                <a href="tel:+16153497710" class="btn btn-primary">
+                  ☎ Call
+                </a>
+                <a href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20is%20Coco%20available%20today%3F" class="btn btn-gold">
+                  ✉ Text
+                </a>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- THERAPIST 3: LILY -->
+          <article class="therapist-card reveal">
+
+            <div class="therapist-media">
+              <img
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop"
+                alt="Lily - Aura Spa Masseuse"
+              />
+              <span class="therapist-badge">
+                Available Today
+              </span>
+            </div>
+
+            <div class="therapist-info">
+
+              <div class="therapist-top">
+                <h3 class="therapist-name">Lily</h3>
+              </div>
+
+              <div class="therapist-stats">
+                <span>✦ 24 yrs</span>
+                <span>◇ 5'3"</span>
+                <span>○ 105 lbs</span>
+              </div>
+
+              <p class="therapist-desc">
+                Petite, charming and deeply attentive to every guest's comfort. Skilled with warm oil techniques, soothing back rubs, and neck tension relief.
+              </p>
+
+              <div class="therapist-tags">
+                <span class="therapist-tag">Warm Oil</span>
+                <span class="therapist-tag">Soft Touch</span>
+                <span class="therapist-tag">Unhurried</span>
+              </div>
+
+              <div class="therapist-actions">
+                <a href="tel:+16153497710" class="btn btn-primary">
+                  ☎ Call
+                </a>
+                <a href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20is%20Lily%20available%20today%3F" class="btn btn-gold">
+                  ✉ Text
+                </a>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- THERAPIST 4: NANA -->
+          <article class="therapist-card reveal">
+
+            <div class="therapist-media">
+              <img
+                loading="lazy"
+                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=800&auto=format&fit=crop"
+                alt="Nana - Aura Spa Masseuse"
+              />
+              <span class="therapist-badge">
+                Available Today
+              </span>
+            </div>
+
+            <div class="therapist-info">
+
+              <div class="therapist-top">
+                <h3 class="therapist-name">Nana</h3>
+              </div>
+
+              <div class="therapist-stats">
+                <span>✦ 26 yrs</span>
+                <span>◇ 5'6"</span>
+                <span>○ 118 lbs</span>
+              </div>
+
+              <p class="therapist-desc">
+                Stunning model look combined with deep massage expertise. Leaves you completely recharged, loose, and stress-free.
+              </p>
+
+              <div class="therapist-tags">
+                <span class="therapist-tag">Expert Pressure</span>
+                <span class="therapist-tag">Fatigue Reset</span>
+                <span class="therapist-tag">Attentive</span>
+              </div>
+
+              <div class="therapist-actions">
+                <a href="tel:+16153497710" class="btn btn-primary">
+                  ☎ Call
+                </a>
+                <a href="sms:+16153497710?body=Hi%20Aura%20Spa%2C%20is%20Nana%20available%20today%3F" class="btn btn-gold">
+                  ✉ Text
+                </a>
               </div>
 
             </div>
@@ -4675,12 +5088,16 @@
             Home
           </a>
 
+          <a href="#about">
+            About
+          </a>
+
           <a href="#services">
             Services
           </a>
 
-          <a href="#about">
-            About
+          <a href="#masseuses">
+            Masseuses
           </a>
 
           <a href="#experience">
